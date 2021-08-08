@@ -1,0 +1,264 @@
+body{
+    color:#333333;
+    font-family: 'lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    /* Explicando margin-auto: Quando vc tem um elemento block e coloca margin auto
+    o navegador insere o máximo de margin onde vc indicou margin auto.
+    As regras são: Display block, largura definida*/
+    background: linear-gradient(white, #D2E4C4 );
+}
+
+.container{
+    position: relative;
+    margin: 0 auto;
+    width: 940px;
+}
+
+header {
+    position: relative;
+}
+
+.sacola{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(../img/sacola.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    width: 140px;
+    text-align: right;
+    padding-right: 35px;
+    padding-top: 8px;
+    font-size: 14px;
+}
+
+.menu-opcoes{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.menu-opcoes ul li{
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-opcoes a {
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.content h1 {
+    background-image: url('/img/sobre-background.jpg');
+    color: black;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+h1 + p{
+    text-indent: 0;
+}
+
+p{
+    padding: 5px 45px;
+    text-indent: 5px;
+    /* Explicando text indent: Serve para empurrar o começo do paragrafo */
+    font-size: 20px;
+}
+
+p::first-letter{
+    font-weight: bold;
+}
+
+/* p::first-line{
+    font-variant: small-caps;
+} */
+
+/*:not(p) + p::first-line{
+    font-variant: small-caps;
+} */
+
+h2{
+    border-bottom: 2px solid #333333;
+    padding: 5px;
+    margin-top: 30px;
+    margin-left: 5px;
+}
+
+figure{
+    background-color: #f2eded;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 30px;
+}
+/* Seletor de id começa com # */
+#centro-distribuicao{
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+#familia-pelho{
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+figcaption{
+    color: black;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.diferenciais li{
+    padding: 5px 45px;
+    text-indent: 5px;
+    margin: 5px;
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+}
+
+footer{
+    background-image: url('../img/fundo-rodape.png');
+    padding: 20px 30px;
+}
+
+.container-rodape{
+    position: relative;
+}
+
+.social{
+    position: absolute;
+    top: 12px;
+    right: 0;
+}
+
+.social li{
+    float: left;
+    margin-left: 25px;
+}
+
+.social li a{
+    height: 32px;
+    width: 32px;
+    display: block;
+    text-indent:-9999px;
+    background-repeat: no-repeat;
+}
+
+.facebook{
+    background-image: url('../img/facebook.png');
+}
+
+.twitter{
+    background-image: url('../img/twitter.png');
+}
+
+.google{
+    background-image: url('../img/googleplus.png');
+}
+
+/* Inicio das media queries */
+@media (max-width: 320px){
+    .container {
+        width: 96%;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    header h1 img {
+        max-width: 50%;
+    }
+
+    .sacola {
+        display: none;
+    }
+
+    .menu-opcoes {
+        position: static;
+        text-align: center;
+    }
+
+    .menu-opcoes ul li {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .content h1{
+        margin: 10px 0;
+        font-size: 30px;
+    }
+
+    .content article section{
+        width: 90%;
+        font-size: 10px;
+    }
+
+    #centro-distribuicao{
+        max-width: 90%;
+    }
+
+    .centro-distribuicao {
+        max-width: 85%;
+    }
+
+    #familia-pelho{
+        float: none;
+    }
+}
+
+@media (max-width: 939px) {
+    .container {
+        width: 96%;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    header h1 img {
+        max-width: 50%;
+    }
+
+    .sacola {
+        display: none;
+    }
+
+    .menu-opcoes {
+        position: static;
+        text-align: center;
+    }
+
+    .menu-opcoes ul li {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .content h1{
+        margin: 10px 0;
+        font-size: 30px;
+    }
+
+    .content article section{
+        margin-right: 0;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    #centro-distribuicao{
+        max-width: 90%;
+    }
+
+    .centro-distribuicao {
+        max-width: 85%;
+    }
+
+    #familia-pelho{
+        float: none;
+    }
+}
